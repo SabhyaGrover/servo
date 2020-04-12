@@ -1328,6 +1328,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "dwrote"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "439a1c2ba5611ad3ed731280541d36d2e9c4ac5e7fb818a27b604bdc5a6aa65b"
+dependencies = [
+ "lazy_static",
+ "libc",
+ "serde",
+ "serde_derive",
+ "winapi",
+ "wio",
+]
+
+[[package]]
 name = "either"
 version = "1.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1538,7 +1552,7 @@ dependencies = [
  "core-graphics 0.19.0",
  "core-text 15.0.0",
  "dirs 2.0.2",
- "dwrote",
+ "dwrote 0.9.0",
  "euclid",
  "float-ord",
  "freetype",
@@ -1760,7 +1774,7 @@ dependencies = [
  "core-foundation 0.6.4",
  "core-graphics 0.17.3",
  "core-text 13.2.0",
- "dwrote",
+ "dwrote 0.11.0",
  "euclid",
  "fnv",
  "fontsan",
@@ -2755,9 +2769,9 @@ dependencies = [
 
 [[package]]
 name = "ipc-channel"
-version = "0.14.0"
+version = "0.14.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "55162cbe44dacbc0b4a66d1067c885a9d5975f068a432801bba0493e1ece7a51"
+checksum = "3698b8affd5656032a074a7d40b3c2a29b71971f3e1ff6042b9d40724e20d97c"
 dependencies = [
  "bincode",
  "crossbeam-channel",
@@ -3610,7 +3624,7 @@ dependencies = [
 [[package]]
 name = "mozjs"
 version = "0.13.0"
-source = "git+https://github.com/servo/rust-mozjs#2598da7110f752d29f2beedf3e47c71f72a354a3"
+source = "git+https://github.com/servo/rust-mozjs#ea10bed291aaa8064fe8da8b36d46b5586a36357"
 dependencies = [
  "cc",
  "lazy_static",
@@ -3623,7 +3637,7 @@ dependencies = [
 [[package]]
 name = "mozjs_sys"
 version = "0.68.1"
-source = "git+https://github.com/servo/mozjs?rev=2392ebc144331184a770bee1f1ac02969946380f#2392ebc144331184a770bee1f1ac02969946380f"
+source = "git+https://github.com/servo/mozjs?rev=d4370798ee17ad16d52ff2e83c9055d19a98b26f#d4370798ee17ad16d52ff2e83c9055d19a98b26f"
 dependencies = [
  "bindgen",
  "cc",
@@ -5400,6 +5414,7 @@ dependencies = [
  "core-foundation 0.6.4",
  "getopts",
  "gl_generator 0.11.0",
+ "ipc-channel",
  "libc",
  "libloading",
  "libservo",
@@ -6570,7 +6585,7 @@ dependencies = [
  "core-graphics 0.17.3",
  "core-text 13.2.0",
  "cstr",
- "dwrote",
+ "dwrote 0.9.0",
  "euclid",
  "freetype",
  "fxhash",
@@ -6665,7 +6680,7 @@ dependencies = [
 [[package]]
 name = "webxr"
 version = "0.0.1"
-source = "git+https://github.com/servo/webxr#72b30f2b70ff7b40dc0ffdeefce1116b24041f3d"
+source = "git+https://github.com/servo/webxr#2ff799c23431d5c20f38b49b211101c86cc1728f"
 dependencies = [
  "bindgen",
  "crossbeam-channel",
@@ -6687,7 +6702,7 @@ dependencies = [
 [[package]]
 name = "webxr-api"
 version = "0.0.1"
-source = "git+https://github.com/servo/webxr#72b30f2b70ff7b40dc0ffdeefce1116b24041f3d"
+source = "git+https://github.com/servo/webxr#2ff799c23431d5c20f38b49b211101c86cc1728f"
 dependencies = [
  "euclid",
  "ipc-channel",

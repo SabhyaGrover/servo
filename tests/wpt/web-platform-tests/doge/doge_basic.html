@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Doge: simple cases</title>
+    <meta name="help" href="https://jeenalee.github.io/doge-standard/">
+    <script src="/resources/testharness.js"></script>
+    <script src="/resources/testharnessreport.js"></script>
+  </head>
+  <body>
+    <script>
+      // The first four tests test the constructor.
+
+      test(function() {
+        new Doge();
+      }, "Create Doge from no parameter");
+
+      test(function() {
+        new Doge(undefined);
+      }, "Create Doge from undefined parameter");
+
+      test(function() {
+        new Doge([]);
+      }, "Create Doge from empty object");
+
+      var dogeSeq = ["wow amazing", "such cool", "very fast",
+      "so magical", "really Servo", "wow good",
+      "very safety", "so Rust"];
+
+      test(function() {
+        var doge = new Doge(dogeSeq);
+      }, "Create Doge with sequence");
+
+      // Now test that append doesn't throw an error
+
+      function checkValueInArray(value, array) {
+        for (var i = 0; i < array.length; i++) {
+          if (array[i] == value) {
+            return true;
+          }
+        }
+        return false;
+      };
+
+      test(function() {
+        var doge = new Doge();
+        for (phrase in dogeSeq) {
+          doge.append(phrase);
+        }
+      }, "Check append method");
+
+      // Check that the random function returns a valid value
+
+      test(function() {
+        var doge = new Doge();
+        for (phrase in dogeSeq) {
+                            doge.append(dogeSeq[phrase]);
+        }
+        var rand = doge.random();
+        assert_true(checkValueInArray(rand, dogeSeq),
+          "Unexpectedly selected random phrase: " + rand + " not in originally appended list");
+      }, "Check append and random methods");
+
+      test(function() {
+        var doge = new Doge();
+        assert_throws(new TypeError(), function () { doge.random(); },
+          "Random should throw error with empty list");
+      }, "Check that random method throws error when list is empty");
+    </script>
+  </body>
+</html>

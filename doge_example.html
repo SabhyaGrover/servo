@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Doge_Example</title>
+        <style>
+            body{
+                font-family: "Comic Sans MS";  
+                color: #ff008d;
+                font-size: 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Doge_Example</h1>
+
+        <script>
+            var myDoge = new Doge(["wow amazing","such cool","very fast",
+            "so magical","really Servo","wow good","very safety","so Rust"]);
+            myDoge.append("such append");
+            document.body.innerHTML = myDoge.random();
+           // document.body.innerHTML = myDoge.remove("wow amazing");
+        </script>
+    </body>
+</html>
